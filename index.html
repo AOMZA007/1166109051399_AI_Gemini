@@ -1,0 +1,168 @@
+import React from 'react';
+import { ChefHat, Star, Utensils, Award, MapPin, Clock, Gem, Crown } from 'lucide-react';
+
+const App = () => {
+  const courses = [
+    {
+      id: 1,
+      name: "L'Excellence",
+      tier: "Luxury Selection",
+      price: "15,000++",
+      description: "สัมผัสจุดเริ่มต้นของความหรูหราด้วยวัตถุดิบนำเข้าชั้นยอด",
+      icon: <Star className="text-[#d4af37]" />,
+      dishes: [
+        { name: "Imperial Osetra Caviar", detail: "คาเวียร์โอเซตร้าเกรดพรีเมียม เสิร์ฟพร้อมทองคำเปลว 24K" },
+        { name: "Blue Lobster Consommé", detail: "ซุปกุ้งล็อบสเตอร์สีน้ำเงินเคี่ยวเข้มข้นสไตล์ฝรั่งเศส" },
+        { name: "Miyazaki Wagyu A5", detail: "เนื้อวากิว A5 ส่วน Striploin ย่างถ่านไม้บิจิโอตัน" }
+      ]
+    },
+    {
+      id: 2,
+      name: "L'Héritage",
+      tier: "Grand Prestige",
+      price: "45,000++",
+      description: "มรดกแห่งรสชาติที่ผสมผสานอัญมณีแห่งท้องทะเลและผืนดิน",
+      icon: <Crown className="text-[#d4af37]" />,
+      dishes: [
+        { name: "Beluga Reserve Caviar", detail: "คาเวียร์เบลูก้าที่หายากที่สุดในภาชนะเปลือกหอยมุก" },
+        { name: "White Truffle Risotto", detail: "ริซอตโต้ข้าวอิตาเลียนปรุงด้วยไวท์ทรัฟเฟิลสดจากพีดมอนต์" },
+        { name: "Kobe Wine Beef A5", detail: "เนื้อโกเบคัดพิเศษระดับสูงสุด สัมผัสนุ่มละลายในปาก" },
+        { name: "Champagne Sphere", detail: "ของหวานโดมทองคำสอดไส้มูสแชมเปญ Dom Pérignon" }
+      ]
+    },
+    {
+      id: 3,
+      name: "L'Éternité",
+      tier: "Ultimate Legend",
+      price: "125,000++",
+      description: "ที่สุดแห่งประสบการณ์เหนือระดับที่ครั้งหนึ่งในชีวิตต้องสัมผัส",
+      icon: <Gem className="text-[#d4af37]" />,
+      dishes: [
+        { name: "Almas Caviar de Diamant", detail: "คาเวียร์ที่แพงที่สุดในโลก สีทองอร่ามดุจเพชรล้ำค่า" },
+        { name: "Wild Brittany Blue Lobster", detail: "ล็อบสเตอร์สีน้ำเงินหายาก ปรุงด้วยแซฟฟรอนจากอิหร่าน" },
+        { name: "Hokkaido Snow Beef A5", detail: "เนื้อสโนว์บีฟที่มีไขมันละเอียดราวเกล็ดหิมะ" },
+        { name: "Bluefin O-Toro 'The King'", detail: "โอโทโร่ส่วนที่ดีที่สุดจากการประมูลครั้งสำคัญ" },
+        { name: "24K Gold & Diamond Dust", detail: "บทสรุปแห่งมื้ออาหารด้วยของหวานประดับผงเพชรและทองคำ" }
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white font-serif selection:bg-[#d4af37] selection:text-black">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; }
+      `}</style>
+
+      {/* Hero Section */}
+      <header className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1600" 
+            className="w-full h-full object-cover opacity-50"
+            alt="Luxury Interior"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black"></div>
+        </div>
+        
+        <div className="relative z-10 text-center px-4">
+          <div className="flex justify-center mb-6 space-x-1">
+            {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="#d4af37" className="text-[#d4af37]" />)}
+          </div>
+          <h1 className="text-6xl md:text-8xl font-cinzel tracking-[0.3em] mb-4 text-[#d4af37]">LUMIÈRE</h1>
+          <p className="text-xl md:text-2xl tracking-[0.5em] text-gray-300 mb-8 font-light">DE L'OR</p>
+          <div className="w-32 h-px bg-[#d4af37] mx-auto mb-8"></div>
+          <p className="text-lg italic text-gray-400 max-w-2xl mx-auto font-playfair">
+            "The Golden Light of Gastronomy"
+          </p>
+        </div>
+      </header>
+
+      {/* Menu Section */}
+      <main className="max-w-6xl mx-auto px-6 py-20">
+        <div className="text-center mb-32">
+          <h2 className="text-4xl font-cinzel text-[#d4af37] tracking-widest mb-4">LES COURS EXCLUSIFS</h2>
+          <p className="text-gray-500 uppercase tracking-[0.2em] text-sm">คัดสรรวัตถุดิบระดับตำนาน เพื่อมื้ออาหารที่สมบูรณ์แบบ</p>
+        </div>
+
+        <div className="space-y-40">
+          {courses.map((course, idx) => (
+            <div key={course.id} className="relative">
+              {/* Course Header */}
+              <div className="flex flex-col md:flex-row justify-between items-end border-b border-[#d4af37]/30 pb-8 mb-16">
+                <div className="text-left mb-6 md:mb-0">
+                  <div className="flex items-center space-x-3 mb-2">
+                    {course.icon}
+                    <span className="text-[#d4af37] tracking-[0.3em] text-xs uppercase">{course.tier}</span>
+                  </div>
+                  <h3 className="text-5xl font-cinzel text-white uppercase tracking-wider">{course.name}</h3>
+                </div>
+                <div className="text-right">
+                  <p className="text-[#d4af37] text-4xl font-light mb-2">THB {course.price}</p>
+                  <p className="text-gray-500 text-sm italic font-playfair">{course.description}</p>
+                </div>
+              </div>
+
+              {/* Dish Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                {course.dishes.map((dish, dIdx) => (
+                  <div key={dIdx} className="group border-l border-[#d4af37]/20 pl-6 py-2 hover:border-[#d4af37] transition-colors duration-500">
+                    <h4 className="text-xl text-white font-cinzel mb-3 group-hover:text-[#d4af37] transition-colors">
+                      {dish.name}
+                    </h4>
+                    <p className="text-gray-400 text-sm leading-relaxed font-playfair italic">
+                      {dish.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Background Number Accent */}
+              <div className="absolute -top-10 -left-10 text-[15rem] font-bold text-white/[0.03] pointer-events-none select-none">
+                0{idx + 1}
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      {/* Booking Section */}
+      <section className="bg-[#0a0a0a] py-32 border-t border-[#d4af37]/20">
+        <div className="max-w-3xl mx-auto text-center px-6">
+          <Award size={48} className="mx-auto text-[#d4af37] mb-8" />
+          <h2 className="text-4xl font-cinzel mb-6 tracking-widest text-[#d4af37]">PRIVATE DINING</h2>
+          <p className="text-gray-400 mb-12 font-playfair text-lg italic leading-relaxed">
+            สัมผัสประสบการณ์การรับประทานอาหารที่เป็นส่วนตัวที่สุด 
+            <br />กรุณาสำรองที่นั่งล่วงหน้าอย่างน้อย 14 วัน สำหรับคอร์ส L'Éternité
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-16">
+            <div className="flex items-center space-x-3 text-xs tracking-widest uppercase">
+              <MapPin size={16} className="text-[#d4af37]" />
+              <span>Gaysorn Village, Bangkok</span>
+            </div>
+            <div className="flex items-center space-x-3 text-xs tracking-widest uppercase">
+              <Clock size={16} className="text-[#d4af37]" />
+              <span>18:00 - 23:00</span>
+            </div>
+          </div>
+          <button className="px-16 py-5 bg-[#d4af37] text-black text-xs tracking-[0.4em] font-bold uppercase hover:bg-white transition-all duration-700 hover:tracking-[0.6em]">
+            Request a Table
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-white/5 text-center">
+        <p className="text-[10px] text-gray-600 tracking-[0.5em] uppercase">
+          &copy; 2025 LUMIÈRE DE L'OR • MICHELIN STARRED ESTABLISHMENT
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
