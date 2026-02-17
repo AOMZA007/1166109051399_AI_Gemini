@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière De L'Or - Michelin 5-Star Experience</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            scroll-behavior: smooth;
+        }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; }
+
+        /* Gold Gradient Text */
+        .text-gold {
+            color: #d4af37;
+        }
+
+        /* Border Glow */
+        .gold-border-glow:hover {
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .course-number {
+            font-size: 15rem;
+            line-height: 1;
+            opacity: 0.03;
+            position: absolute;
+            top: -2rem;
+            left: -2rem;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#d4af37] selection:text-black">
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] flex flex-col items-center justify-center overflow-hidden border-b border-[#d4af37]/10">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a_0%,_#000_100%)] opacity-60"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <div class="flex justify-center mb-6 space-x-1">
+                <i data-lucide="star" fill="#d4af37" class="text-[#d4af37] w-5 h-5"></i>
+                <i data-lucide="star" fill="#d4af37" class="text-[#d4af37] w-5 h-5"></i>
+                <i data-lucide="star" fill="#d4af37" class="text-[#d4af37] w-5 h-5"></i>
+                <i data-lucide="star" fill="#d4af37" class="text-[#d4af37] w-5 h-5"></i>
+                <i data-lucide="star" fill="#d4af37" class="text-[#d4af37] w-5 h-5"></i>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-cinzel tracking-[0.3em] mb-4 text-[#d4af37]">LUMIÈRE</h1>
+            <p class="text-xl md:text-2xl tracking-[0.5em] text-gray-300 mb-8 font-light">DE L'OR</p>
+            <div class="w-32 h-px bg-[#d4af37] mx-auto mb-8"></div>
+            <p class="text-lg italic text-gray-400 max-w-2xl mx-auto uppercase tracking-[0.2em]">
+                The Golden Light of Gastronomy
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-24">
+        <div class="text-center mb-32">
+            <h2 class="text-4xl font-cinzel text-[#d4af37] tracking-widest mb-4 uppercase">Les Cours Exclusifs</h2>
+            <p class="text-gray-500 uppercase tracking-[0.2em] text-sm">คัดสรรวัตถุดิบระดับตำนาน เพื่อมื้ออาหารที่สมบูรณ์แบบ</p>
+        </div>
+
+        <div class="space-y-64">
+            <!-- Course 1 -->
+            <section class="relative">
+                <div class="course-number font-cinzel">01</div>
+                <div class="flex flex-col md:flex-row justify-between items-end border-b border-[#d4af37]/30 pb-10 mb-20">
+                    <div class="text-left mb-8 md:mb-0">
+                        <div class="flex items-center space-x-3 mb-3 text-[#d4af37]">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span class="tracking-[0.4em] text-xs uppercase font-bold">Luxury Selection</span>
+                        </div>
+                        <h3 class="text-5xl md:text-6xl font-cinzel text-white uppercase tracking-widest">L'Excellence</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[#d4af37] text-4xl md:text-5xl font-light mb-2 tracking-tight">THB 15,000++</p>
+                        <p class="text-gray-500 text-sm italic">สัมผัสจุดเริ่มต้นของความหรูหราด้วยวัตถุดิบนำเข้าชั้นยอด</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-20">
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Imperial Osetra Caviar</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">คาเวียร์โอเซตร้าเกรดพรีเมียม เสิร์ฟพร้อมทองคำเปลว 24K</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Blue Lobster Consommé</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">ซุปกุ้งล็อบสเตอร์สีน้ำเงินเคี่ยวเข้มข้นสไตล์ฝรั่งเศส</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Miyazaki Wagyu A5</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">เนื้อวากิว A5 ส่วน Striploin ย่างถ่านไม้บิจิโอตัน</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course 2 -->
+            <section class="relative">
+                <div class="course-number font-cinzel">02</div>
+                <div class="flex flex-col md:flex-row justify-between items-end border-b border-[#d4af37]/30 pb-10 mb-20">
+                    <div class="text-left mb-8 md:mb-0">
+                        <div class="flex items-center space-x-3 mb-3 text-[#d4af37]">
+                            <i data-lucide="crown" class="w-4 h-4"></i>
+                            <span class="tracking-[0.4em] text-xs uppercase font-bold">Grand Prestige</span>
+                        </div>
+                        <h3 class="text-5xl md:text-6xl font-cinzel text-white uppercase tracking-widest">L'Héritage</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[#d4af37] text-4xl md:text-5xl font-light mb-2 tracking-tight">THB 45,000++</p>
+                        <p class="text-gray-500 text-sm italic">มรดกแห่งรสชาติที่ผสมผสานอัญมณีแห่งท้องทะเลและผืนดิน</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-20">
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Beluga Reserve Caviar</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">คาเวียร์เบลูก้าที่หายากที่สุดในภาชนะเปลือกหอยมุก</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">White Truffle Risotto</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">ริซอตโต้ข้าวอิตาเลียนปรุงด้วยไวท์ทรัฟเฟิลสดจากพีดมอนต์</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Kobe Wine Beef A5</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">เนื้อโกเบคัดพิเศษระดับสูงสุด สัมผัสนุ่มละลายในปาก</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course 3 -->
+            <section class="relative">
+                <div class="course-number font-cinzel">03</div>
+                <div class="flex flex-col md:flex-row justify-between items-end border-b border-[#d4af37]/30 pb-10 mb-20">
+                    <div class="text-left mb-8 md:mb-0">
+                        <div class="flex items-center space-x-3 mb-3 text-[#d4af37]">
+                            <i data-lucide="gem" class="w-4 h-4"></i>
+                            <span class="tracking-[0.4em] text-xs uppercase font-bold">Ultimate Legend</span>
+                        </div>
+                        <h3 class="text-5xl md:text-6xl font-cinzel text-white uppercase tracking-widest">L'Éternité</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[#d4af37] text-4xl md:text-5xl font-light mb-2 tracking-tight">THB 125,000++</p>
+                        <p class="text-gray-500 text-sm italic">ที่สุดแห่งประสบการณ์เหนือระดับที่ครั้งหนึ่งในชีวิตต้องสัมผัส</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-20">
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Almas Caviar de Diamant</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">คาเวียร์ที่แพงที่สุดในโลก สีทองอร่ามดุจเพชรล้ำค่า</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Wild Brittany Blue Lobster</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">ล็อบสเตอร์สีน้ำเงินหายาก ปรุงด้วยแซฟฟรอนจากอิหร่าน</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Hokkaido Snow Beef A5</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">เนื้อสโนว์บีฟที่มีไขมันละเอียดราวเกล็ดหิมะ</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">Bluefin O-Toro 'The King'</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">โอโทโร่ส่วนที่ดีที่สุดจากการประมูลครั้งสำคัญ</p>
+                    </div>
+                    <div class="border-l border-[#d4af37]/30 pl-8 py-3 gold-border-glow transition-all duration-500">
+                        <h4 class="text-xl text-white font-cinzel mb-4 tracking-wide">24K Gold & Diamond Dust</h4>
+                        <p class="text-gray-500 text-base leading-relaxed italic">ของหวานประดับผงเพชรและทองคำ 24K</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Booking Section -->
+    <section class="bg-[#050505] py-32 border-t border-[#d4af37]/20">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <i data-lucide="award" class="mx-auto text-[#d4af37] w-12 h-12 mb-8"></i>
+            <h2 class="text-4xl font-cinzel mb-6 tracking-widest text-[#d4af37]">Private Dining</h2>
+            <p class="text-gray-400 mb-12 text-lg italic leading-relaxed">
+                สัมผัสประสบการณ์การรับประทานอาหารที่เป็นส่วนตัวที่สุด 
+                <br>กรุณาสำรองที่นั่งล่วงหน้าอย่างน้อย 14 วัน สำหรับคอร์ส L'Éternité
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-16">
+                <div class="flex items-center space-x-3 text-xs tracking-widest uppercase text-gray-400">
+                    <i data-lucide="map-pin" class="text-[#d4af37] w-4 h-4"></i>
+                    <span>Gaysorn Village, Bangkok</span>
+                </div>
+                <div class="flex items-center space-x-3 text-xs tracking-widest uppercase text-gray-400">
+                    <i data-lucide="clock" class="text-[#d4af37] w-4 h-4"></i>
+                    <span>18:00 - 23:00 (Everyday)</span>
+                </div>
+            </div>
+            <button class="px-16 py-5 bg-[#d4af37] text-black text-xs tracking-[0.4em] font-bold uppercase hover:bg-white transition-all duration-700 hover:tracking-[0.6em] shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                Request a Table
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5 text-center">
+        <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase">
+            &copy; 2025 LUMIÈRE DE L'OR • MICHELIN STARRED ESTABLISHMENT
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
